@@ -16,23 +16,27 @@ function main()
 {
     //let element = document.getElementById("kplayer_ifp");
 
+    let iframeElem = document.getElementById("kplayer_ifp")
 
-    let htmlText = document.getElementById("kplayer_ifp").contentDocument.body.innerHTML;
-    let index = htmlText.search("pid_kplayer")
-    let elemText = htmlText.slice(index)
-    let elemList = elemText.split(" ")
-    let src = elemList[10].split("\"")
+    if (iframeElem != null)
+    {
+        let htmlText = iframeElem.contentDocument.body.innerHTML;
+        let index = htmlText.search("pid_kplayer")
+        let elemText = htmlText.slice(index)
+        let elemList = elemText.split(" ")
+        let src = elemList[10].split("\"")
 
-    let button = document.createElement("button");
-    button.id = 'myID';
-    button.innerHTML = ' Click me to copy the download link! ';
+        let button = document.createElement("button");
+        button.id = 'myID';
+        button.innerHTML = ' Click me to copy the download link! ';
 
-    text = src[1];
-    console.log("Loaded")
+        text = src[1];
+        console.log("Loaded")
 
-    addClickListenerToElem(button, copyTextToCB)
+        addClickListenerToElem(button, copyTextToCB)
 
-    document.body.insertBefore(button,document.body.childNodes[0]);
+        document.body.insertBefore(button,document.body.childNodes[0]);
+    }
 }
 
 
