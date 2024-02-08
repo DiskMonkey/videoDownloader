@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Kaltura Download
-// @namespace    http://tampermonkey.net/
+// @namespace    mcmuck
 // @version      2024-02-08
 // @description  copys blob data into clipboard for Kaltura Course Media. matches rutgers canvas.
-// @author       You
+// @author       mcmuck
 // @match        https://rutgers.instructure.com/courses/263719/external_tools/*
 // @match        https://208082-1.kaf.kaltura.com/media/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=kaltura.com
