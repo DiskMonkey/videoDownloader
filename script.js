@@ -40,6 +40,7 @@ function copyTextToCB()
 {
     console.log(text)
     navigator.clipboard.writeText(text);
+    alert("Copied the link.")
 }
 
 function addClickListenerToElem(elem, funct) // this function is defined in pointsAudio
